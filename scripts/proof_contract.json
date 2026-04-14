@@ -1,0 +1,36 @@
+{
+  "route_scene": "res://scenes/Route01.tscn",
+  "battle_scene": "res://scenes/Battle.tscn",
+  "battle_receipt": {
+    "id": "first_capture_battle",
+    "location": "Route01",
+    "enemy_party": [
+      {
+        "species": "Mossbit",
+        "level": 2,
+        "capture_target": true
+      }
+    ],
+    "starting_items": [
+      {
+        "id": "thread_snare",
+        "count": 1
+      }
+    ]
+  },
+  "save_receipt": {
+    "checkpoint_id": "route01_after_first_capture",
+    "roster_delta": {
+      "captured_species": [
+        "Mossbit"
+      ],
+      "active_party_slot": 0
+    },
+    "spent_items": [
+      {
+        "id": "thread_snare",
+        "count": 1
+      }
+    ]
+  }
+}

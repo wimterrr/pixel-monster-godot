@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/route01.gd" id="1_route"]
+[ext_resource type="Script" path="res://scripts/save_anchor.gd" id="2_save"]
+
+[node name="Route01" type="Node2D"]
+script = ExtResource("1_route")
+
+[node name="SaveAnchor" type="Node" parent="."]
+script = ExtResource("2_save")
+
+[node name="BattleEntry" type="Marker2D" parent="."]
+position = Vector2(160, 96)

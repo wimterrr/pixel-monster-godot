@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-04-14T05:32:06.118Z",
+  "proof": "route01-first-capture-contract",
+  "workspace": {
+    "project_file": {
+      "path": "project.godot",
+      "sha256": "a9d3180b35ff4a0492e166536798e641c672be80675f63f2c9ade62419ca938c"
+    },
+    "README": {
+      "path": "README.md",
+      "sha256": "4eb6d9d84f15e94d081ef7ef08376424efeee1991b6e5cb919628603397b603a"
+    }
+  },
+  "route_scene": {
+    "path": "scenes/Route01.tscn",
+    "sha256": "997f2d58af67c9b4bc916c0f69ddb432217e49ccb04374d608b1bdc31065f63a",
+    "nodes": [
+      "Route01",
+      "SaveAnchor",
+      "BattleEntry"
+    ],
+    "battle_entry_position": {
+      "x": 160,
+      "y": 96
+    }
+  },
+  "battle_scene": {
+    "path": "scenes/Battle.tscn",
+    "sha256": "0f9dc263303331aeb321a6308013c793243e01c632d68d4981752d9f202b82d3",
+    "nodes": [
+      "Battle",
+      "EnemySpawn"
+    ],
+    "enemy_spawn_position": {
+      "x": 224,
+      "y": 96
+    }
+  },
+  "save_anchor_contract": {
+    "path": "scripts/save_anchor.gd",
+    "sha256": "3bd1b8a96b7f5b914bcabe608693636a687c367a256b0eac0cf46bc6cdb7412e",
+    "required_fields": [
+      "checkpoint_id",
+      "roster_delta",
+      "spent_items"
+    ],
+    "contract_note": {
+      "path": "scripts/save_anchor_contract.md",
+      "sha256": "1dec97486771b2a5b16c5aefd7660365aa11d7706a0e6a81455f1be3e0289e23"
+    }
+  },
+  "runtime_scripts": [
+    {
+      "path": "scripts/route01.gd",
+      "sha256": "64840f024b8588247926664b17ec88dc499b8d2cf3037c2da71556d4c75d2cc0"
+    },
+    {
+      "path": "scripts/battle.gd",
+      "sha256": "76cc846083b801eadc5852988f901460c89ffb270ccc601c72e167de15cf95c4"
+    }
+  ],
+  "proof_contract": {
+    "path": "scripts/proof_contract.json",
+    "sha256": "4567b86daf39d407af0e82812347da38f7fe828807d981541929548fa61f6439",
+    "battle_receipt_id": "first_capture_battle",
+    "checkpoint_id": "route01_after_first_capture",
+    "captured_species": [
+      "Mossbit"
+    ],
+    "spent_items": [
+      {
+        "id": "thread_snare",
+        "count": 1
+      }
+    ]
+  }
+}
