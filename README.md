@@ -1,25 +1,32 @@
 # Pixel Monster Godot
 
-Minimal Godot bootstrap for the engine-first pixel monster proof.
+Godot 4 기반 픽셀 몬스터 RPG 부트스트랩입니다. [pixel-monster-no-engine](https://github.com/wimterrr/pixel-monster-no-engine)의 엔진 버전으로, 첫 캡처 → 세이브/로드 루프를 증명합니다.
 
-Current scope:
+## Tech Stack
 
-- one Route01 scene
-- one Battle scene
-- one save anchor contract
-- no content expansion before the cold-reload receipt exists
+- Godot 4.x (Forward+ 렌더러, GDScript)
+- Node.js (proof contract 검증 스크립트)
 
-Immediate next build order:
+## Current Scope
 
-1. Wire `scenes/Route01.tscn` as the main scene.
-2. Add a save anchor node with checkpoint, roster delta, and spent item state.
-3. Use `scenes/Battle.tscn` for one explicit first-capture battle payload.
-4. Prove a cold reload from the saved first capture back into Route01.
+- `scenes/Route01.tscn` — 오버월드 (SaveAnchor + BattleEntry)
+- `scenes/Battle.tscn` — 전투 씬 (EnemySpawn)
+- `scripts/proof_contract.json` — 첫 캡처 페이로드와 세이브 영수증을 동결
+- `scripts/save_anchor_contract.md` — 세이브 영수증 계약 (사람이 읽을 수 있는 형태)
 
-Current local proof contract:
+## Proof Contract
 
-- `scenes/Route01.tscn` must expose `SaveAnchor` and `BattleEntry`.
-- `scenes/Battle.tscn` must expose one `EnemySpawn`.
-- `scripts/proof_contract.json` freezes the first capture payload and save receipt.
-- `scripts/save_anchor_contract.md` is the human-readable save receipt contract and must stay aligned with the script.
-- `node scripts/verify-proof-contract.mjs` is the local receipt gate for this repo and writes `outputs/latest-proof-receipt.json`, including SHA-256 provenance for the workspace config, README, scenes, scripts, and save-anchor contract note.
+JSON 계약이 예상 전투/세이브 영수증을 고정하고, 검증 스크립트가 SHA-256 해시로 구조적 정합성을 확인합니다.
+
+```bash
+node scripts/verify-proof-contract.mjs
+```
+
+## Getting Started
+
+1. Godot 4.x로 프로젝트 열기
+2. F5로 실행
+
+## License
+
+MIT
